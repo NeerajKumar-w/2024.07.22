@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            height: 500px;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: pink;
+        }
+        .options{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+        .row{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            background-color: azure;
+            gap: 5px;
+            height: 50px;
+        }
+        .option{
+            width: 10%;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            align-content: center;
+            color: white;
+        }
+        .answer{
+            height: 100%;
+            width:80%;
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section id="content">
+        <div class="box">
+            <div><h1>In Web design, what does CSS stand for?</h1></div>
+            <div class="options">
+                <div class="row false" onclick="checkans(false)"><p class="option">A</p><p class="answer">Counter Strike Source</p></div>
+                <div class="row false" onclick="checkans(false)"><p class="option">B</p><p class="answer">Corrective Style Sheet</p></div>
+                <div class="row false" onclick="checkans(false)"><p class="option">C</p><p class="answer">Computer Style Sheet</p></div>
+                <div class="row" id="correct" onclick="checkans(true)"><p class="option" id="crctopt">D</p><p class="answer">Cascading Style Sheet</p></div>
+            </div>
+        </div>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
